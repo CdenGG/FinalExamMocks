@@ -15,7 +15,7 @@ Write your answers in a separate txt file in a format like:
 Coding Problems
 1. Your code here...
 
-Then upload the final exam  PDF file and the text file to a model like chatGPT that 
+Then upload the final exam  PDF/.txt file and the answers .txt file to a model like chatGPT that 
 accepts uploads and ask it to grade it for you.
 
 ## How to create your own exams:
