@@ -16,7 +16,7 @@ accepts uploads and ask it to grade it for you.
 
 ## How to create your own exams:
 
-On gradescope, download your graded Exam 1, 2, and 3. Then, download the last Course Material Files in Folio for Week 14
+On gradescope, download your graded Exam 1, 2, and 3 (Or use mine that I put in ExamsFromGradeScope directory) Then, download the last Course Material Files in Folio for Week 14
 and Week 15.
 
 Upload these files to ChatGPT or your choice model, and ask it to Generate a prompt to make final exams.
