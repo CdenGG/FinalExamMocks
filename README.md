@@ -5,7 +5,7 @@ LegacyExams folder.
 # FinalExamMocks
 Mock exams and a study guide for CSCI 1302.
 
-## How to get automatic grades:
+## How to get your exam graded:
 
 Write your answers in a separate txt file in a format like:
 1. A
