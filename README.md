@@ -1,3 +1,7 @@
+## Update:
+I didnt find the first exams the best quality, so I generated more better quality exams. You can still find the first exams in the 
+LegacyExams folder.
+
 # FinalExamMocks
 Four mock exams and a study guide for CSCI 1302.
 
