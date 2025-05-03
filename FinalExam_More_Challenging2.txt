@@ -1,0 +1,198 @@
+Total Points: 100
+Multiple Choice (11 questions, 3 points each = 33 points)
+
+ Select the single best answer for each question.
+
+   1 (3 points) Which stream combination allows reading Java objects from a binary file while also improving performance via buffering?
+    A. ObjectInputStream -> FileInputStream
+    B. ObjectInputStream -> BufferedInputStream -> FileInputStream
+    C. DataInputStream -> BufferedInputStream -> FileInputStream
+    D. BufferedReader -> FileReader
+
+   2 (3 points) What is the purpose of overriding the writeStreamHeader() method when creating a custom ObjectOutputStream subclass for appending objects?
+    A. To write extra version information at the start of the file.
+    B. To prevent the header from being written when appending to a non-empty file, which would corrupt the stream.
+    C. To compress the stream header for efficiency.
+    D. To encrypt the object data during serialization.
+
+   3 (3 points) RandomAccessFile allows moving the file pointer using seek(). If a file contains 100 records, each 20 bytes long, what byte offset should you seek to reach the beginning of the 5th record (index 4)?
+    A. 5 * 20 = 100
+    B. 4 * 20 = 80
+    C. (5 - 1) * 20 + 1 = 81
+    D. It depends on the file system cluster size.
+
+   4 (3 points) A method is defined as public static void recur(int x) { if (x > 0) { System.out.print(x); recur(x-1); } }. What is the output of recur(3)?
+    A. 123
+    B. 321
+    C. 1 2 3
+    D. 3 2 1
+
+   5 (3 points) Recursion is particularly well-suited for problems that exhibit:
+    A. Simple linear iteration.
+    B. Random access data patterns.
+    C. A self-similar structure, where the problem can be broken down into smaller versions of itself.
+    D. The need for multiple independent threads of execution.
+
+   6 (3 points) Using a recursive helper method (e.g., sort(arr, low, high) called by sort(arr)) is often beneficial for recursive algorithms operating on arrays or lists because:
+    A. It forces the use of tail recursion.
+    B. It allows the recursive calls to manage the changing sub-problem boundaries (like low and high indices) without exposing them in the initial public method signature.
+    C. It eliminates the need for base cases.
+    D. It automatically handles ArrayIndexOutOfBoundsException.
+
+   7 (3 points) What is the key difference between implementing an interface and extending an abstract class in terms of inheritance?
+    A. A class can implement multiple interfaces but extend only one abstract (or concrete) class.
+    B. Interfaces provide constructors; abstract classes do not.
+    C. Abstract classes define constants; interfaces define instance variables.
+    D. Extending abstract classes is mandatory; implementing interfaces is optional.
+
+   8 (3 points) In JavaFX, if you want nodes to wrap to the next line/row when the container runs out of space horizontally, which layout pane is suitable?
+    A. BorderPane
+    B. GridPane
+    C. FlowPane
+    D. StackPane
+
+   9 (3 points) Which is NOT a typical component of event handling in GUI programming?
+    A. Event Source (e.g., the button that was clicked).
+    B. Event Object (containing information about the event).
+    C. Event Listener/Handler (code that responds to the event).
+    D. Event Serializer (saving the event to a file).
+
+   10 (3 points) A final method in a class:
+    A. Cannot be called from outside the class.
+    B. Must be implemented by all subclasses.
+    C. Cannot be overridden by subclasses.
+    D. Can only be called once per object instance.
+
+   11 (3 points) When catching exceptions, why is it generally recommended to catch more specific exception types (like FileNotFoundException) before broader types (like IOException)?
+    A. To ensure the finally block executes correctly.
+    B. To allow different handling logic for different specific errors, preventing the general handler from masking specific cases.
+    C. Java requires specific exceptions to be caught first syntactically.
+    D. Broader exception types provide more detailed error information.
+
+Short Answer / Code Reading (5 questions, variable points = 32 points)
+
+    12 (6 points) Explain the difference between writeChars(String s) and writeUTF(String s) in DataOutputStream. Which one is generally preferred if you intend to read the string back using DataInputStream.readUTF()? Why?
+
+    13 (7 points) Trace the execution of the following recursive method call: power(2, 4), where power is defined as:
+    Java
+
+    public static int power(int base, int exp) {
+        if (exp == 0) return 1;
+        if (exp == 1) return base;
+        else return base * power(base, exp - 1);
+    }
+
+    Show the sequence of calls and the multiplications performed.
+
+   14 (6 points) Describe the roles of the Stage and Scene objects in a typical JavaFX application. How do they relate to each other?
+
+   15 (7 points) What is the conceptual difference between an abstract class representing an "is-a" relationship (like Animal -> Dog) and an interface representing a "has-a-capability" or "can-do" relationship (like Flyable implemented by Bird and Airplane)?
+
+   16 (6 points) You are reading records from a RandomAccessFile. Each record has a fixed size. How do you determine if you have reached the end of the file before attempting a read that would go past the end? (Hint: consider getFilePointer() and length()).
+
+Coding / Program Design (4 questions, variable points = 35 points)
+
+    17 (10 points) Write a recursive Java method printTreePreOrder(TreeNode node) that performs a pre-order traversal (Visit, Left, Right) of a binary tree and prints the data (assume it's an int) of each node. Assume a simple TreeNode class with int data, TreeNode left, and TreeNode right fields exists.
+    Java
+
+// Assume TreeNode class exists:
+// class TreeNode { int data; TreeNode left, right; ... }
+
+public static void printTreePreOrder(TreeNode node) {
+    // Base Case: Node is null?
+
+    // Recursive Step (Visit, Left, Right):
+    // 1. Print current node's data.
+    // 2. Recurse on left child.
+    // 3. Recurse on right child.
+}
+
+18 (12 points) Write a Java method mergeDataFiles(String file1, String file2, String outputFile) that reads double values sequentially from two different binary input files (file1, file2) and writes them, interleaved, to a binary output file (outputFile). Assume both input files contain only doubles written with DataOutputStream.writeDouble(). Read one double from file1, write it, read one double from file2, write it, repeat until one file ends, then write any remaining doubles from the other file. Use buffered streams and handle potential exceptions (EOFException, IOException).
+Java
+
+import java.io.*;
+
+public static void mergeDataFiles(String file1, String file2, String outputFile) {
+    try ( /* Setup DataInputStream dis1 for file1 (buffered) */
+          /* Setup DataInputStream dis2 for file2 (buffered) */
+          /* Setup DataOutputStream dos for outputFile (buffered) */ )
+    {
+        boolean file1Done = false;
+        boolean file2Done = false;
+        while (!file1Done || !file2Done) {
+            try {
+                if (!file1Done) {
+                    // Read double from dis1, write to dos
+                }
+            } catch (EOFException e) { file1Done = true; }
+
+            try {
+                 if (!file2Done) {
+                    // Read double from dis2, write to dos
+                 }
+            } catch (EOFException e) { file2Done = true; }
+        }
+    } catch (IOException e) {
+        e.printStackTrace();
+    }
+}
+
+19 (13 points) Create a JavaFX application start method that displays a simple calculator interface using a GridPane.
+
+    Row 0: A TextField (read-only for display) spanning 4 columns.
+    Row 1: Buttons "7", "8", "9", "/"
+    Row 2: Buttons "4", "5", "6", "*"
+    Row 3: Buttons "1", "2", "3", "-"
+    Row 4: Buttons "0", ".", "=", "+"
+    Set reasonable spacing/padding. Create the scene and show the stage. No event handling logic required for this problem. Focus only on the layout setup.
+
+Java
+
+import javafx.application.Application;
+import javafx.geometry.Insets;
+import javafx.scene.Scene;
+import javafx.scene.control.*;
+import javafx.scene.layout.GridPane;
+import javafx.stage.Stage;
+// Potentially: import javafx.scene.layout.Priority;
+
+public class CalculatorLayout extends Application {
+    @Override
+    public void start(Stage primaryStage) {
+        GridPane grid = new GridPane();
+        grid.setPadding(new Insets(10));
+        grid.setHgap(5);
+        grid.setVgap(5);
+
+        TextField display = new TextField();
+        display.setEditable(false);
+        display.setAlignment(javafx.geometry.Pos.CENTER_RIGHT);
+        grid.add(display, 0, 0, 4, 1); // Span 4 columns
+
+        String[] buttons = {
+            "7", "8", "9", "/",
+            "4", "5", "6", "*",
+            "1", "2", "3", "-",
+            "0", ".", "=", "+"
+        };
+
+        int row = 1, col = 0;
+        for (String text : buttons) {
+            Button btn = new Button(text);
+            // Optional: btn.setMaxWidth(Double.MAX_VALUE); // Make buttons fill width
+            // Optional: GridPane.setHgrow(btn, Priority.ALWAYS); // Make buttons grow
+            grid.add(btn, col, row);
+            col++;
+            if (col > 3) {
+                col = 0;
+                row++;
+            }
+        }
+
+        Scene scene = new Scene(grid);
+        primaryStage.setTitle("Calculator Layout");
+        primaryStage.setScene(scene);
+        primaryStage.show();
+    }
+    // main method...
+}
