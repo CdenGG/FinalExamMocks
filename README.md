@@ -1,5 +1,5 @@
 ## Update:
-I didnt find the first exams the best quality, so I generated more better quality exams. You can still find the first exams in the 
+I didnt find the first exams the best quality, so I generated better quality exams. You can still find the first exams in the 
 LegacyExams folder.
 
 # FinalExamMocks
