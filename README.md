@@ -1,5 +1,5 @@
 # FinalExamMocks
-Four mock exams and a study guide.
+Four mock exams and a study guide for CSCI 1302.
 
 ## How to get automatic grades:
 
