@@ -29,11 +29,15 @@ base the exam design on the exam 1, 2, 3 uploads, etc. You can do as much as you
 
 Then when you have a good prompt simply reupload the files to a new chat and paste that prompt. Tada!
 
+
+
 # How to get ChatGPT Plus and Google Gemini Pro for free
 ## Both methods require card, but do not charge.
 ### ChatGPT:
   [Follow these instructions to get ChatGPT plus for two months.](https://chatgpt.com/students)
   
-### Gemini:
+### Gemini: ( I HIGHLY RECOMMEND THIS OVER CHATGPT FOR THIS PROJECT )
   [Follow these instructions to get Google Gemini Pro until the end of 2026.](https://gemini.google/students/?hl=en)
   
+
+
