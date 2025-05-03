@@ -17,9 +17,9 @@ Coding Problems
 
 Then upload the final exam  PDF/.txt file and the answers .txt file to a model like chatGPT that 
 accepts uploads and ask it to grade it for you.
+###Remember: Failing the coding portion on the Final Exam means you will get an F in the class!
 
 ## How to create your own exams:
-
 
 Upload the files in PromptFiles to your choice model, and ask it to Generate a prompt to make final exams (Or, use the prompts I generated myself in prompts.txt under PromptFiles)
 Tweak the generated prompts or my prompts to your liking. I tweaked it to only have 20 questions, 30 pts are coding questions,
