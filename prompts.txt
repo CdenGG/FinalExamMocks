@@ -1,0 +1,84 @@
+
+# THIS PROMPT MAKES EXAMS THAT ARE AT THE LEVEL OF THE OTHER EXAMS
+
+Role: You are the course coordinator for CSCI 1302 – Programming Principles II.
+Task: Write a brand‑new comprehensive FINAL EXAM for students to practice.
+Exam‑building resources
+
+    Mid‑terms: provided exam pdfs
+
+    Study guide: provided exam 2 study guide
+
+    Lecture PDFs (week 14 and 15): focus on Binary I/O & Recursion
+
+Construction rules
+
+    Exactly 20 questions in well‑spaced Markdown.
+
+    Mirror the section balance, wording style, and difficulty of the three mid‑terms, but do not reuse identical prompts.
+
+    ≥ 11 questions must be multiple‑choice, each with four options (A–D).
+
+    Include several short‑answer / code‑reading items like those on the mid‑terms.
+
+    Provide coding / program‑design problems worth a combined ≥ 30 points (e.g., 2–3 sizeable tasks).
+
+    Show the point value beside every question; total must equal 100 points.
+
+    Supply starter code snippets, UML diagrams, or clarifying context for each coding question so students can work independently.
+
+    Draw new material from the last‑four‑weeks lecture notes and Labs 11‑12, while still covering earlier semester topics proportionally.
+
+    Exclude solutions or answer keys—output questions only.
+
+    If any attached file’s content is ambiguous, ask follow‑up questions before drafting.
+
+When ready, output only the finished exam in Markdown that satisfies every rule above.
+
+
+------------------------------------------------------------------------------------------
+# THIS PROMPT MAKES EXAMS THAT ARE MORE CHALLENGING
+
+Role: You are the course coordinator for CSCI 1302 – Programming Principles II.
+Task: Write a brand‑new comprehensive FINAL EXAM for students to practice.
+📚 Exam-building resources
+
+    Mid‑terms: provided exam PDFs
+
+    Study guide: provided Exam 2 study guide
+
+    Lecture PDFs (weeks 14–15): focus on Binary I/O & Recursion
+
+    Labs 11–12: cover binary file handling and recursion
+
+🛠️ Exam Construction Rules
+
+    Exactly 20 questions, formatted in well‑spaced Markdown.
+
+    Follow the section balance, wording style, and structure of the three mid‑terms, but do not reuse any identical prompts.
+
+    Most questions (≥ 11) must be multiple-choice, each with exactly four answer options (A–D).
+
+    Include several short‑answer or code‑reading questions, as seen in previous exams.
+
+    Provide coding/program design problems worth a combined ≥ 30 points (e.g., 2–3 sizeable tasks).
+
+    Clearly label the point value beside every question; the total must equal 100 points.
+
+    For coding questions, include starter code snippets, UML diagrams, or supporting context to ensure students can work independently.
+
+    Cover material from the entire course, but draw several new items from the last 4 weeks (Binary I/O and Recursion).
+
+    Make this final slightly more challenging than the mid-terms, while staying within the scope of CSCI 1302 concepts and expectations. This can be done by:
+
+        Increasing question depth (e.g., combining multiple concepts in one question)
+
+        Requiring deeper reasoning in coding/design tasks
+
+        Using slightly more complex code samples in reading or tracing questions
+
+    Do not include answer keys or solutions—output questions only.
+
+    If any provided files are unclear, ask for clarification before generating the final output.
+
+When ready, output only the finished final exam in well-formatted Markdown that fully satisfies all requirements above.
