@@ -1,7 +1,7 @@
 # FinalExamMocks
 Four mock exams and a study guide.
 
-# How to get automatic grades:
+## How to get automatic grades:
 
 Write your answers in a separate txt file in a format like:
 1. A
@@ -14,7 +14,7 @@ Coding Problems
 Then upload the final exam  PDF file and the text file to a model like chatGPT that 
 accepts uploads and ask it to grade it for you.
 
-# How to create your own exams:
+## How to create your own exams:
 
 On gradescope, download your graded Exam 1, 2, and 3. Then, download the last Course Material Files in Folio for Week 14
 and Week 15.
