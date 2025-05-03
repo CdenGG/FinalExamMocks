@@ -28,8 +28,8 @@ Then when you have a good prompt simply reupload the files to a new chat and pas
 # How to get ChatGPT Plus and Google Gemini Pro for free
 ## Both methods require card, but do not charge.
 ### ChatGPT:
-  [S](https://chatgpt.com/students)
-  Follow these instructions to get ChatGPT plus for two months.
+  [Follow these instructions to get ChatGPT plus for two months.](https://chatgpt.com/students)
+  
 ### Gemini:
-  [S](https://gemini.google/students/?hl=en)
-  Follow these instructions to get Google Gemini Pro until the end of 2026.
+  [Follow these instructions to get Google Gemini Pro until the end of 2026.](https://gemini.google/students/?hl=en)
+  
