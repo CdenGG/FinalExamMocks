@@ -41,7 +41,7 @@ When ready, output only the finished exam in Markdown that satisfies every rule 
 
 Role: You are the course coordinator for CSCI 1302 – Programming Principles II.
 Task: Write a brand‑new comprehensive FINAL EXAM for students to practice.
-📚 Exam-building resources
+ Exam-building resources
 
     Mid‑terms: provided exam PDFs
 
@@ -51,7 +51,7 @@ Task: Write a brand‑new comprehensive FINAL EXAM for students to practice.
 
     Labs 11–12: cover binary file handling and recursion
 
-🛠️ Exam Construction Rules
+ Exam Construction Rules
 
     Exactly 20 questions, formatted in well‑spaced Markdown.
 
