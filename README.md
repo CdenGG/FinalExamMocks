@@ -16,9 +16,7 @@ Coding Problems
 1. Your code here...
 
 Then upload the final exam  PDF/.txt file and the answers .txt file to a model like chatGPT that 
-accepts uploads and ask it to grade it for you.
-
-###Remember: Failing the coding portion on the Final Exam means you will get an F in the class!
+accepts uploads and ask it to grade it for you. **Remember: Failing the coding portion on the Final Exam means you will get an F in the class!**
 
 ## How to create your own exams:
 
