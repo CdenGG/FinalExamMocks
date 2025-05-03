@@ -1,0 +1,162 @@
+﻿CSCI 1302 Programming Principles II - Final Exam (Practice)
+Total Points: 100
+
+Multiple Choice (12 questions, 3 points each = 36 points)
+
+Select the single best answer for each question.
+
+1. (3 points) When serializing an ArrayList of Serializable objects using
+ObjectOutputStream.writeObject(), what is actually written to the stream?
+A. Each object in the list is written individually, requiring a loop and multiple
+writeObject() calls.
+B. Only the ArrayList object itself is written, losing the elements it contains.
+C. A representation of the ArrayList object and all the Serializable objects it
+currently contains are written.
+D. The toString() representation of the ArrayList is written as a single UTF string.
+
+2. (3 points) Consider the RandomAccessFile class. If you want to overwrite the data
+starting at byte offset 100, which sequence of method calls is most appropriate?
+A. seek(100); writeInt(newData);
+B. getFilePointer(100); write(newData);
+C. setPosition(100); writeObject(newData);
+D. skipBytes(100); writeUTF(newData);
+
+3. (3 points) Which combination of streams is typically used to write primitive Java data
+types efficiently to a binary file?
+A. PrintWriter wrapped around a FileWriter.
+B. ObjectOutputStream wrapped around a FileOutputStream.
+C. DataOutputStream wrapped around a BufferedOutputStream wrapped around a
+FileOutputStream.
+D. FileOutputStream used directly with write(byte[]).
+
+4. (3 points) A recursive method relies on the Java call stack. What is the primary
+consequence if a recursive function calls itself too many times without reaching a base
+case?
+A. HeapOverflowException due to excessive object creation.
+B. StackOverflowError due to exhausting stack memory.
+C. IOException due to system resource limits.
+D. ArrayIndexOutOfBoundsException due to invalid stack indices.
+
+5. (3 points) Examine the following recursive method:
+public static int compute(int n) {
+if (n <= 1) return 1;
+else return compute(n-1) + compute(n-2);
+}
+This method calculates terms of which sequence, assuming standard indexing
+(n=0,1,2,...)?
+A. Factorial sequence (adjusted).
+B. Power sequence (base 2).
+C. Fibonacci sequence (shifted index or starting values).
+D. Arithmetic sequence (summation).
+
+6. (3 points) What distinguishes a tail-recursive method from a general recursive method?
+A. It uses a while loop instead of an if statement for the base case.
+B. The recursive call is the very last action performed, with no pending operations
+(like addition or multiplication) using its return value.
+C. It must have exactly two base cases.
+D. It calls itself exactly twice in the recursive step.
+
+7. (3 points) If class Widget implements Comparable<Widget>, what must be true about the
+compareTo method's implementation?
+A. It must return true if the objects are equal, false otherwise.
+B. It defines a "natural ordering" by returning a negative integer, zero, or a positive
+integer based on whether the current object is less than, equal to, or greater than the
+specified object.
+C. It must use the equals method internally to determine equality.
+D. It accepts any Object as a parameter and performs a cast.
+
+8. (3 points) In JavaFX, which code snippet correctly sets an event handler for a Button
+named myButton using a lambda expression to print "Clicked!" to the console?
+A. myButton.setHandler(event -> System.out.println("Clicked!"));
+B. myButton.setOnAction(e -> System.out.println("Clicked!"));
+C. myButton.addActionListener(() -> System.out.println("Clicked!"));
+D. myButton.handleEvent(action -> System.out.println("Clicked!"));
+
+9. (3 points) How does an abstract class differ fundamentally from a concrete (non-
+abstract) class in Java?
+A. Abstract classes cannot have constructors.
+B. Abstract classes cannot contain any implemented methods.
+C. Abstract classes cannot be instantiated directly using new.
+D. Abstract classes can extend multiple other classes.
+
+10. (3 points) Consider a try-with-resources statement: try (Resource r = new Resource())
+{ ... }. What interface must Resource implement for this statement to be valid?
+A. Runnable
+B. Serializable
+C. Closeable or AutoCloseable
+D. Resourceful
+
+11. (3 points) Polymorphism allows a variable of a superclass type to refer to an object
+of a subclass type. When a method is called on such a variable, which implementation of
+the method is executed?
+A. The implementation in the superclass (static binding).
+B. The implementation in the subclass, if it overrides the method (dynamic binding).
+C. Whichever implementation has a more restrictive access modifier.
+D. A combination of both superclass and subclass implementations.
+
+12. (3 points) You need to create a file that contains configuration settings easily
+readable and editable by a human user. Which I/O approach is most suitable?
+A. ObjectOutputStream to serialize a configuration object.
+B. DataOutputStream to write key-value pairs as primitives.
+C. PrintWriter writing formatted strings to a text file.
+D. RandomAccessFile with fixed-length string fields.
+Short Answer / Code Reading (4 questions, 29 points)
+
+13. (7 points) Examine this recursive method:
+public static String formatList(java.util.ArrayList<String> list, int index) {
+if (index >= list.size()) {
+return ""; // Base case: end of list
+}
+String currentElement = list.get(index);
+if (index == list.size() - 1) {
+return currentElement; // Base case: last element, no comma
+} else {
+// Recursive step
+return currentElement + ", " + formatList(list, index + 1);
+}
+}
+
+14. What is the exact output produced by System.out.println(formatList(myList, 0)); if
+myList contains the elements ["A", "B", "C"]? Is this method tail-recursive? Explain why
+or why not.
+
+15. (7 points) Contrast the use of ObjectOutputStream with DataOutputStream. If you need
+to store the state of complex Java objects (containing other objects, arrays, etc.) so
+they can be fully reconstructed later, which stream is appropriate and why? What must be
+true about the classes of the objects being stored?
+
+16. (7 points) Consider the JavaFX KeyEvent.getCode() method, which returns a KeyCode enum
+value (e.g., KeyCode.UP, KeyCode.A, KeyCode.SHIFT). Explain how you would structure an
+event handler (e.g., for setOnKeyPressed) to perform different actions based on whether
+the user pressed the UP arrow key versus the DOWN arrow key. Show a simple pseudo-code or
+describe the if-else if or switch structure.
+17. (8 points) You are given a RandomAccessFile named raf opened in "rw" mode. The file
+stores records, each consisting of a long (8 bytes) timestamp followed by an int (4 bytes)
+reading. You want to update the reading value of the 10th record (index 9) without
+disturbing other data. Describe the steps involved, including calculating the correct
+position using seek() and using the appropriate write() method.
+Coding / Program Design (4 questions, 35 points)
+
+18. (10 points) Implement a recursive Java method countFiles(File directory) that counts
+the total number of files (not directories) within the given directory and all of its
+subdirectories. Use the File class methods listFiles(), isFile(), and isDirectory().
+Clearly define the base case(s) and the recursive step(s) using comments. Handle the case
+where listFiles() might return null (e.g., for restricted directories).
+
+19. (12 points) Design a LogEntry class that implements Serializable. It should contain a
+timestamp (long) and a message (String). Include a constructor and necessary accessors.
+Then, write a Java method appendLog(LogEntry entry, String filename) that appends a single
+LogEntry object to the end of a binary file specified by filename.
+Challenge: Because standard ObjectOutputStream overwrites files or requires
+reading/rewriting the whole file to append, you need to handle appending carefully. You
+might need a custom AppendingObjectOutputStream (subclassing ObjectOutputStream to
+override writeStreamHeader conditionally) or handle file existence and headers manually.
+For this exam, assume you can simply open FileOutputStream(filename, true) and wrap an
+ObjectOutputStream around it, but explain in a comment the potential issue with the stream
+header if the file already exists and contains objects.
+
+20. (13 points) Write a Java method recursiveFilter(ArrayList<Integer> input,
+ArrayList<Integer> output, int index) that recursively processes the input list. If an
+element at the current index is even, it should be added to the output list. The method
+should continue processing until all elements in input are considered. The initial call
+would be something like recursiveFilter(sourceList, destinationList, 0).
