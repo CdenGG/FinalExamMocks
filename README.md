@@ -3,7 +3,7 @@ I didnt find the first exams the best quality, so I generated more better qualit
 LegacyExams folder.
 
 # FinalExamMocks
-Four mock exams and a study guide for CSCI 1302.
+Mock exams and a study guide for CSCI 1302.
 
 ## How to get automatic grades:
 
